@@ -2,10 +2,10 @@
 
 ## Description
 
-This is a 3D model of [J-22 Orao ("Eagle")](https://en.wikipedia.org/wiki/Soko_J-22_Orao)
-for FlightGear an open-source flight simulator.
+This is a home of [J-22 Orao)](https://en.wikipedia.org/wiki/Soko_J-22_Orao)
+aircraft for FlightGear an open-source flight simulator.
 
-J-22 Orao is a single seat twin engine attack aircraft. It is the result of
+J-22 Orao ("Eagle") is a single seat twin engine attack aircraft. It is the result of
 coorporation between Yugoslavian and Romanian flight industry. First
 flight was taken in 1974, the first attack variant was launched in 1983. J-22
 (IAR 93 in Romania) is a low-cost aircraft and therefore appropriate for less
@@ -27,14 +27,14 @@ exported. Later the model was reworked from scratch for FlightGear in Blender.
 
 - full 3D model
 - basic flight model
-- gear animation
+- gear, canopy animation
 
 ## TODO
 
 - more realistic flight model
 - 3d cockpit
-- avionics inlc. radar, armament system etc.
-- more model animation (conopy, airbrakes)
+- avionics inlc. HUD, radar, armament system etc.
+- more model animations (airbrakes)
 
 # Repository structure
 
