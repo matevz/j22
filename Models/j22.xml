@@ -1,0 +1,850 @@
+<?xml version="1.0"?>
+
+<!-- J-22 model by Matevz Jekovec -->
+
+<PropertyList>
+
+ <path>j22.ac</path>
+
+<!-- Hide objects at certain condition -->
+ <!-- Hide pilot head (helmet) and breathing mask in 0 view -->
+ <animation>
+  <type>select</type>
+  <object-name>Helmet</object-name>
+  <object-name>BreathingTube</object-name>
+  <condition>
+   <not>
+   <equals>
+    <property>/sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+   </not>
+  </condition>
+ </animation>
+ 
+ <!-- Nose gear and nose gear reflectors when retracted -->
+ <animation>
+  <type>select</type>
+  <object-name>Nosegear</object-name>
+  <object-name>Nosegear.cyl</object-name>
+  <object-name>Nosegear.struct</object-name>
+  <object-name>Reflector01</object-name>
+  <object-name>Reflector02</object-name>
+  <condition>
+   <not>
+   <equals>
+    <property>gear/gear/position-norm</property>
+    <value>0.0</value>
+   </equals>
+   </not>
+  </condition>
+ </animation>
+  
+ <!-- Left gear when retracted -->
+ <animation>
+  <type>select</type>
+  <object-name>Leftgear</object-name>
+  <object-name>Leftgear.cyl</object-name>
+  <object-name>Leftgear.struct</object-name>
+  <condition>
+   <not>
+   <equals>
+    <property>gear/gear[1]/position-norm</property>
+    <value>0.0</value>
+   </equals>
+   </not>
+  </condition>
+ </animation>
+ 
+ <!-- Right gear when retracted -->
+ <animation>
+  <type>select</type>
+  <object-name>Rightgear</object-name>
+  <object-name>Rightgear.cyl</object-name>
+  <object-name>Rightgear.struct</object-name>
+  <condition>
+   <not>
+   <equals>
+    <property>gear/gear[2]/position-norm</property>
+    <value>0.0</value>
+   </equals>
+   </not>
+  </condition>
+ </animation>
+ 
+<!-- Object animation -->
+ <!-- Pilot head when steering -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Helmet</object-name>
+  <object-name>BreathingTube</object-name>
+  <property>gear/gear/steering-norm</property>
+  <offset-deg>0</offset-deg>
+  <factor>-25</factor>
+  <center>
+   <x-m>-4.020</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.795</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+  
+ <!-- Canopy -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Canopy</object-name>
+  <property>/canopy/position-norm</property>
+  <factor>55</factor>
+  <center>
+   <x-m>-3.433</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.973</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+<!-- RUDDERS -->
+ <!-- Rudder bits (tail rudder turn) -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Rudder</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>-18</factor>
+  <center>
+   <x-m>5.047</x-m>
+   <y-m>0.0</y-m>
+   <z-m>1.499</z-m>
+  </center>
+  <axis>
+   <x>15.274</x>
+   <y>0</y>
+   <z>32.246</z>
+  </axis>
+ </animation>
+ 
+ <!-- Rudder bits (nose gear turn) -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Nosegear</object-name>
+  <object-name>Nosegear.cyl</object-name>
+  <object-name>Nosegear.struct</object-name>
+  <object-name>Reflector01</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>25</factor>
+  <center>
+   <x-m>-5.441</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-1.648</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+<!-- ELEVATORS -->
+ <!-- Last right wing (elevator) -->
+ <animation>
+  <type>rotate</type>
+  <object-name>LastWing.right</object-name>
+  <property>surface-positions/elevator-pos-norm</property>
+  <factor>25</factor>
+  <center>
+   <x-m>4.459</x-m>
+   <y-m>0.693</y-m>
+   <z-m>-0.173</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <!-- Right aileron (elevator!) -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Ailerons.right</object-name>
+  <property>surface-positions/elevator-pos-norm</property>
+  <factor>10</factor>
+  <center>
+   <x-m>1.182</x-m>
+   <y-m>2.700</y-m>
+   <z-m>0.256</z-m>
+  </center>
+  <axis>
+   <x>0.704</x>
+   <y>1.967</y>
+   <z>-0.087</z>
+  </axis>
+ </animation>
+ 
+ <!-- Last left wing (elevator) bits -->
+ <animation>
+  <type>rotate</type>
+  <object-name>LastWing.left</object-name>
+  <property>surface-positions/elevator-pos-norm</property>
+  <factor>25</factor>
+  <min-deg>-35</min-deg>
+  <max-deg>35</max-deg>
+  <center>
+   <x-m>4.459</x-m>
+   <y-m>-0.693</y-m>
+   <z-m>-0.173</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <!-- Left aileron (elevator!) -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Ailerons.left</object-name>
+  <property>surface-positions/elevator-pos-norm</property>
+  <factor>-10</factor>
+  <center>
+   <x-m>1.182</x-m>
+   <y-m>-2.700</y-m>
+   <z-m>0.256</z-m>
+  </center>
+  <axis>
+   <x>0.704</x>
+   <y>-1.967</y>
+   <z>-0.087</z>
+  </axis>
+ </animation>
+ 
+<!-- AILERONS -->
+ <!-- Left aileron (last left wing) -->
+ <animation>
+  <type>rotate</type>
+  <object-name>LastWing.left</object-name>
+  <property>surface-positions/left-aileron-pos-norm</property>
+  <factor>18</factor>
+  <center>
+   <x-m>4.459</x-m>
+   <y-m>-0.693</y-m>
+   <z-m>-0.173</z-m>
+  </center>
+  <axis>
+   <x>-0.5</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ <!-- Left aileron (left wing aileron) -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Ailerons.left</object-name>
+  <property>surface-positions/left-aileron-pos-norm</property>
+  <factor>-20</factor>
+  <center>
+   <x-m>1.182</x-m>
+   <y-m>-2.700</y-m>
+   <z-m>0.256</z-m>
+  </center>
+  <axis>
+   <x>0.704</x>
+   <y>-1.967</y>
+   <z>-0.087</z>
+  </axis>
+ </animation>
+ 
+ <!-- Right aileron (last right wing) -->
+ <animation>
+  <type>rotate</type>
+  <object-name>LastWing.right</object-name>
+  <property>surface-positions/right-aileron-pos-norm</property>
+  <factor>18</factor>
+  <center>
+   <x-m>4.459</x-m>
+   <y-m>0.693</y-m>
+   <z-m>-0.173</z-m>
+  </center>
+  <axis>
+   <x>-0.5</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ <!-- Right aileron (right wing aileron) -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Ailerons.right</object-name>
+  <property>surface-positions/right-aileron-pos-norm</property>
+  <factor>20</factor>
+  <center>
+   <x-m>1.182</x-m>
+   <y-m>2.700</y-m>
+   <z-m>0.256</z-m>
+  </center>
+  <axis>
+   <x>0.704</x>
+   <y>1.967</y>
+   <z>-0.087</z>
+  </axis>
+ </animation>
+ 
+<!-- GEARS -->
+ <!-- Nose gear animation -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Nosegear</object-name>
+  <object-name>Nosegear.cyl</object-name>
+  <object-name>Nosegear.struct</object-name>
+  <object-name>Reflector01</object-name>
+  <property>gear/gear/position-norm</property>
+  <factor>-205</factor>
+  <offset-deg>153.75</offset-deg>
+  <min-deg>0</min-deg>
+  <max-deg>102.5</max-deg>
+  <center>
+   <x-m>-5.469</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.505</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <!-- Nose gear back door -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Nosegear.door01</object-name>
+  <property>gear/gear/position-norm</property>
+  <factor>-460</factor>
+  <offset-deg>115</offset-deg>
+  <min-deg>0</min-deg>
+  <max-deg>115</max-deg>
+  <center>
+   <x-m>-5.420</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.680</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <!-- Nose gear left door open (gear up) -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Nosegear.door02</object-name>
+  <property>gear/gear/position-norm</property>
+  <factor>-400</factor>
+  <offset-deg>100</offset-deg>
+  <min-deg>0</min-deg>
+  <max-deg>95</max-deg>
+  <center>
+   <x-m>-6.685</x-m>
+   <y-m>-0.200</y-m>
+   <z-m>-0.518</z-m>
+  </center>
+  <axis>
+   <x>0.469</x>
+   <y>-0.009</y>
+   <z>-0.063</z>
+  </axis>
+ </animation>
+
+ <!-- Nose gear left door close (gear up) -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Nosegear.door02</object-name>
+  <property>gear/gear/position-norm</property>
+  <factor>400</factor>
+  <offset-deg>-300</offset-deg>
+  <min-deg>0</min-deg>
+  <max-deg>95</max-deg>
+  <center>
+   <x-m>-6.685</x-m>
+   <y-m>-0.200</y-m>
+   <z-m>-0.518</z-m>
+  </center>
+  <axis>
+   <x>0.469</x>
+   <y>-0.009</y>
+   <z>-0.063</z>
+  </axis>
+ </animation>
+
+ <!-- Nose gear right door open (gear up) -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Nosegear.door03</object-name>
+  <property>gear/gear/position-norm</property>
+  <factor>-400</factor>
+  <offset-deg>300</offset-deg>
+  <min-deg>-95</min-deg>
+  <max-deg>0</max-deg>
+  <center>
+   <x-m>-6.685</x-m>
+   <y-m>0.200</y-m>
+   <z-m>-0.518</z-m>
+  </center>
+  <axis>
+   <x>0.469</x>
+   <y>0.009</y>
+   <z>-0.063</z>
+  </axis>
+ </animation>
+
+ <!-- Nose gear right door close (gear up) -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Nosegear.door03</object-name>
+  <property>gear/gear/position-norm</property>
+  <factor>400</factor>
+  <offset-deg>-100</offset-deg>
+  <min-deg>-95</min-deg>
+  <max-deg>0</max-deg>
+  <center>
+   <x-m>-6.685</x-m>
+   <y-m>0.200</y-m>
+   <z-m>-0.518</z-m>
+  </center>
+  <axis>
+   <x>0.469</x>
+   <y>0.009</y>
+   <z>-0.063</z>
+  </axis>
+ </animation>
+  
+ <!-- Nose gear front reflector -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Reflector02</object-name>
+  <property>gear/gear/position-norm</property>
+  <factor>720</factor>
+  <offset-deg>-540</offset-deg>
+  <min-deg>-180</min-deg>
+  <max-deg>0</max-deg>
+  <center>
+   <x-m>-7.000</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.447</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <!-- Nose gear compression -->
+ <animation>
+  <type>translate</type>
+  <object-name>Reflector01</object-name>
+  <object-name>Nosegear</object-name>
+  <object-name>Nosegear.cyl</object-name>
+  <object-name>Nosegear.struct</object-name>
+  <property>gear/gear/compression-norm</property>
+  <factor>0.5</factor>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <!-- Left gear animation -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Leftgear.struct</object-name>
+  <object-name>Leftgear</object-name>
+  <object-name>Leftgear.cyl</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <factor>122.73</factor>
+  <offset-deg>-92.0475</offset-deg>
+  <min-deg>-77.37</min-deg>
+  <max-deg>0</max-deg>
+  <center>
+   <x-m>0.323</x-m>
+   <y-m>-0.373</y-m>
+   <z-m>-0.391</z-m>
+  </center>
+  <axis>
+   <x>-7</x>
+   <y>-12.462804</y>
+   <z>0.8252084</z>
+  </axis>
+ </animation>
+ 
+ <!-- Left gear main door -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Leftgear.door</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <factor>560</factor>
+  <offset-deg>-140</offset-deg>
+  <min-deg>-140</min-deg>
+  <max-deg>0</max-deg>
+  <center>
+   <x-m>0.301</x-m>
+   <y-m>-0.310</y-m>
+   <z-m>-0.783</z-m>
+  </center>
+  <axis>
+   <x>0.724</x>
+   <y>-0.003</y>
+   <z>0.050</z>
+  </axis>
+ </animation>
+ 
+ <!-- Left gear front door open (gear up) -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Leftgear.door01</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <factor>400</factor>
+  <offset-deg>-400</offset-deg>
+  <min-deg>-100</min-deg>
+  <max-deg>0</max-deg>
+  <center>
+   <x-m>-0.547</x-m>
+   <y-m>-0.747</y-m>
+   <z-m>-0.388</z-m>
+  </center>
+  <axis>
+   <x>0.927</x>
+   <y>-0.023</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <!-- Left gear front door close (gear up) -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Leftgear.door01</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <factor>-400</factor>
+  <offset-deg>100</offset-deg>
+  <min-deg>0</min-deg>
+  <max-deg>100</max-deg>
+  <center>
+   <x-m>-0.547</x-m>
+   <y-m>-0.747</y-m>
+   <z-m>-0.388</z-m>
+  </center>
+  <axis>
+   <x>0.927</x>
+   <y>-0.023</y>
+   <z>0</z>
+  </axis>
+ </animation>
+  
+ <!-- Left gear compression -->
+ <animation>
+  <type>translate</type>
+  <object-name>Leftgear</object-name>
+  <object-name>Leftgear.cyl</object-name>
+  <object-name>Leftgear.struct</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+  <factor>0.5</factor>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <!-- Right gear animation -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Rightgear.struct</object-name>
+  <object-name>Rightgear</object-name>
+  <object-name>Rightgear.cyl</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <factor>-122.73</factor>
+  <offset-deg>92.0475</offset-deg>
+  <min-deg>0</min-deg>
+  <max-deg>77.37</max-deg>
+  <center>
+   <x-m>0.323</x-m>
+   <y-m>0.373</y-m>
+   <z-m>-0.391</z-m>
+  </center>
+  <axis>
+   <x>-7</x>
+   <y>12.462804</y>
+   <z>0.8252084</z>
+  </axis>
+ </animation>
+ 
+ <!-- Right gear main door -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Rightgear.door</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <factor>-560</factor>
+  <offset-deg>140</offset-deg>
+  <min-deg>0</min-deg>
+  <max-deg>140</max-deg>
+  <center>
+   <x-m>0.301</x-m>
+   <y-m>0.310</y-m>
+   <z-m>-0.783</z-m>
+  </center>
+  <axis>
+   <x>0.724</x>
+   <y>0.003</y>
+   <z>0.050</z>
+  </axis>
+ </animation>
+ 
+ <!-- Right gear front door open (gear up) -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Rightgear.door01</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <factor>-400</factor>
+  <offset-deg>400</offset-deg>
+  <min-deg>0</min-deg>
+  <max-deg>100</max-deg>
+  <center>
+   <x-m>-0.547</x-m>
+   <y-m>0.747</y-m>
+   <z-m>-0.388</z-m>
+  </center>
+  <axis>
+   <x>0.927</x>
+   <y>0.023</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <!-- Right gear front door close (gear up) -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Rightgear.door01</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <factor>400</factor>
+  <offset-deg>-100</offset-deg>
+  <min-deg>-100</min-deg>
+  <max-deg>0</max-deg>
+  <center>
+   <x-m>-0.547</x-m>
+   <y-m>0.747</y-m>
+   <z-m>-0.388</z-m>
+  </center>
+  <axis>
+   <x>0.927</x>
+   <y>0.023</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <!-- Right gear compression -->
+ <animation>
+  <type>translate</type>
+  <object-name>Rightgear</object-name>
+  <object-name>Rightgear.cyl</object-name>
+  <object-name>Rightgear.struct</object-name>
+  <property>gear/gear[2]/compression-norm</property>
+  <factor>0.5</factor>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+  
+<!-- FLAPS -->
+ <!-- Right flap -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Flaps.right</object-name>
+  <property>surface-positions/right-flap-pos-norm</property>
+  <factor>35</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>0.732</x-m>
+   <y-m>0.839</y-m>
+   <z-m>0.332</z-m>
+  </center>
+  <axis>
+   <x>0.45</x>
+   <y>1.861</y>
+   <z>-0.086</z>
+  </axis>
+ </animation>
+
+ <!-- Left flap -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Flaps.left</object-name>
+  <property>surface-positions/left-flap-pos-norm</property>
+  <factor>-35</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>0.732</x-m>
+   <y-m>-0.839</y-m>
+   <z-m>0.332</z-m>
+  </center>
+  <axis>
+   <x>0.45</x>
+   <y>-1.861</y>
+   <z>-0.086</z>
+  </axis>
+ </animation>
+
+<!-- SLATS -->
+ <!-- Right slat -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Slats.right</object-name>
+  <property>surface-positions/right-slat-pos-norm</property>
+  <factor>-20</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>2.067</x-m>
+   <y-m>4.541</y-m>
+   <z-m>-1.184</z-m>
+  </center>
+  <axis>
+   <x>1.816</x>
+   <y>2.401</y>
+   <z>-0.113</z>
+  </axis>
+ </animation>
+ 
+ <!-- Left slat -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Slats.left</object-name>
+  <property>surface-positions/left-slat-pos-norm</property>
+  <factor>20</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>2.067</x-m>
+   <y-m>-4.541</y-m>
+   <z-m>-1.184</z-m>
+  </center>
+  <axis>
+   <x>1.816</x>
+   <y>-2.401</y>
+   <z>-0.113</z>
+  </axis>
+ </animation>
+ 
+<!-- AIRBRAKE/SPOILER bits -->
+ <!-- Right airbrake -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Airbrake.right</object-name>
+  <object-name>RightBrake.cyl</object-name>
+  <property>surface-positions/right-spoiler-pos-norm</property>
+  <factor>35</factor>
+  <offset-deg>-35</offset-deg>
+  <center>
+   <x-m>-2.645</x-m>
+   <y-m>-0.522</y-m>
+   <z-m>-0.793</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- Left airbrake-->
+ <animation>
+  <type>rotate</type>
+  <object-name>Airbrake.left</object-name>
+  <object-name>LeftBrake.cyl</object-name>
+  <property>surface-positions/left-spoiler-pos-norm</property>
+  <factor>35</factor>
+  <offset-deg>-35</offset-deg>
+  <center>
+   <x-m>-2.645</x-m>
+   <y-m>0.522</y-m>
+   <z-m>-0.793</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+<!-- SPINNING WHEELS -->
+ <!-- Nose gear spin -->
+  <animation>
+  <type>spin</type>
+  <object-name>Nosegear</object-name>
+  <property>velocities/uBody-fps</property>
+  <factor>-1.5</factor>
+  <center>
+   <x-m>-5.441</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-1.648</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ <!-- Left gear spin -->
+ <animation>
+  <type>spin</type>
+  <object-name>Leftgear</object-name>
+  <property>velocities/uBody-fps</property>
+  <factor>-1.5</factor>
+  <center>
+   <x-m>-0.196</x-m>
+   <y-m>-1.149</y-m>
+   <z-m>-1.613</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+  <condition><property>gear/gear[1]/wow</property></condition>
+ </animation>
+ 
+ <!-- Right gear spin -->
+ <animation>
+  <type>spin</type>
+  <object-name>Rightgear</object-name>
+  <property>velocities/uBody-fps</property>
+  <factor>-1.5</factor>
+  <center>
+   <x-m>-0.196</x-m>
+   <y-m>1.149</y-m>
+   <z-m>-1.613</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>
+
+
+
+
