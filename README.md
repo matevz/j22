@@ -1,6 +1,6 @@
 # Soko J-22 Orao / IAR 93 for FlightGear
 
-[[Pics/j22-exterior02.jpg]]
+![J-22 Orao](Pics/j22-exterior02.jpg)
 
 ## Description
 
