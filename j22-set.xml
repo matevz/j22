@@ -1,19 +1,59 @@
 <?xml version="1.0"?>
 <!--
 ************************************************************************
-Soko J-22 Orao. This file ties together all the components used by FGFS
-to represent the J-22. Components include the flight data model, HUD
-and external 3D model.
+Soko J-22 Orao simulation config.
 
+2001-2020 Matevž Jekovec
 ************************************************************************
 -->
 
 <PropertyList>
  <sim>
-
+ 
   <description>Soko J-22 Orao / IAR-93</description>
-  <author>Matevz Jekovec</author>
-
+  <author>Matevž Jekovec</author>
+  <long-description>
+J-22 Orao is a single seat twin engine attack aircraft. It is the result of
+coorporation between Yugoslavian and Romanian flight industry. First
+flight was taken in 1974, the first attack variant was launched in 1983. J-22
+(IAR 93 in Romania) is a low-cost aircraft and therefore appropriate for less
+economically developed countries. However, it includes advanced parts as well
+like HUD, laser-aimed altitude, night-vision and radion-avigation controls.
+There is also a two-seat training variant of this aircraft.
+ </long-description>
+ 
+ <rating>
+  <FDM type="int">1</FDM>
+  <systems type="int">1</systems>
+  <cockpit type="int">1</cockpit>
+  <model type="int">2</model>
+ </rating>
+ 
+		<tags>
+			<tag>fighter</tag>
+			<tag>bomber</tag>
+			<tag>soko</tag>
+			<tag>1980s</tag>
+			<tag>1990s</tag>
+			<tag>balkans</tag>
+			<tag>retractable-gear</tag>
+			<tag>jet</tag>
+			<tag>twin-engine</tag>
+		</tags>
+  
+		<previews>
+   <preview>
+			 <type>exterior</type>
+			 <splash type="bool">true</splash>
+			 <path>Pics/j22-exterior01.jpg</path>
+   </preview>
+		 <preview>
+			 <type>exterior</type>
+			 <splash type="bool">true</splash>
+			 <path>Pics/j22-exterior02.jpg</path>
+   </preview>
+		</previews>
+  
   <virtual-cockpit archive="y">false</virtual-cockpit>
 
   <flight-model>yasim</flight-model>
