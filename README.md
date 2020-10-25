@@ -28,15 +28,15 @@ exported. Later the model was reworked from scratch for FlightGear in Blender.
 ## Features
 
 - full 3D model
-- basic flight model
-- gear, canopy animation
+- basic YASim flight model
+- movable elevators and ailerons
+- gear, canopy, speedbrake animation
 
 ## TODO
 
 - more realistic flight model
 - 3d cockpit
 - avionics inlc. HUD, radar, armament system etc.
-- more model animations (airbrakes)
 
 # Repository structure
 
