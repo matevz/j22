@@ -133,13 +133,6 @@
   <control-speed control="EXTEND" transition-time="5"/>
  </gear>
 
-<!-- Canopy -->
- <gear x="4.1" y="0.0" z="1.05" retract-time="6" compression="0.6">
-  <control-input axis="/controls/gear/brake-parking" control="EXTEND"/>
-  <control-speed control="EXTEND" transition-time="6"/>
-  <control-output control="EXTEND" prop="/canopy/position-norm"/>
- </gear>
-
 <!-- The capacities of seperated fuel tanks are a guess work-->
 <!-- Fuselage tank (behind the cockpit) -->
  <tank x="2.738" y="0" z="0.282" jet="true" capacity="1805"/>

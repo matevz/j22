@@ -32,6 +32,8 @@ There is also a two-seat training variant of this aircraft.
 		<tags>
 			<tag>fighter</tag>
 			<tag>bomber</tag>
+			<tag>combat</tag>
+			<tag>pressurised</tag>
 			<tag>soko</tag>
 			<tag>1980s</tag>
 			<tag>1990s</tag>
@@ -100,13 +102,30 @@ There is also a two-seat training variant of this aircraft.
   <help>
    <title>Soko J-22 Orao</title>
    <key>
-    <name>j/k</name>
-    <desc>decrease/increase spoilers</desc>
+    <name>c</name>
+    <desc>Toggle canopy</desc>
    </key>
   </help>
 
  </sim>
-
+ 
+ <input>
+  <keyboard>
+   <key n="99">
+    <name>c</name>
+    <desc>Toggle canopy</desc>
+    <binding>
+     <command>nasal</command>
+     <script>canopy.canopy_switch(2)</script>
+    </binding>
+   </key>
+  </keyboard>
+ </input>
+ 
+ <canopy>
+  <canopy-pos-norm type="float">1.0</canopy-pos-norm>
+ </canopy>
+ 
  <autopilot>
    <config>
      <min-climb-speed-kt type="float">200.0</min-climb-speed-kt>
@@ -122,6 +141,11 @@ There is also a two-seat training variant of this aircraft.
    </config>
  </autopilot>
 
+ <nasal>
+  <canopy>
+   <file>Aircraft/j22/Nasal/canopy.nas</file>
+  </canopy>
+ </nasal>
 </PropertyList>
 
 
