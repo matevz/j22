@@ -4,7 +4,7 @@
 
 ## Description
 
-This is a home of [J-22 Orao)](https://en.wikipedia.org/wiki/Soko_J-22_Orao)
+This is a home of [J-22 Orao](https://en.wikipedia.org/wiki/Soko_J-22_Orao)
 aircraft for FlightGear an open-source flight simulator.
 
 J-22 Orao ("Eagle") is a single seat twin engine attack aircraft. It is the result of
