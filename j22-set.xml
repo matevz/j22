@@ -105,6 +105,10 @@ There is also a two-seat training variant of this aircraft.
     <name>c</name>
     <desc>Toggle canopy</desc>
    </key>
+   <key>
+    <name>Ctrl-b</name>
+    <desc>Toggle speedbrake</desc>
+   </key>
   </help>
 
  </sim>
