@@ -22,39 +22,39 @@ like HUD, laser-aimed altitude, night-vision and radion-avigation controls.
 There is also a two-seat training variant of this aircraft.
  </long-description>
  
- <rating>
-  <FDM type="int">1</FDM>
-  <systems type="int">1</systems>
-  <cockpit type="int">1</cockpit>
-  <model type="int">2</model>
- </rating>
- 
-		<tags>
-			<tag>fighter</tag>
-			<tag>bomber</tag>
-			<tag>combat</tag>
-			<tag>pressurised</tag>
-			<tag>soko</tag>
-			<tag>1980s</tag>
-			<tag>1990s</tag>
-			<tag>balkans</tag>
-			<tag>retractable-gear</tag>
-			<tag>jet</tag>
-			<tag>twin-engine</tag>
-		</tags>
+  <rating>
+   <FDM type="int">1</FDM>
+   <systems type="int">1</systems>
+   <cockpit type="int">1</cockpit>
+   <model type="int">2</model>
+  </rating>
   
-		<previews>
+  <tags>
+   <tag>fighter</tag>
+   <tag>bomber</tag>
+   <tag>combat</tag>
+   <tag>pressurised</tag>
+   <tag>soko</tag>
+   <tag>1980s</tag>
+   <tag>1990s</tag>
+   <tag>balkans</tag>
+   <tag>retractable-gear</tag>
+   <tag>jet</tag>
+   <tag>twin-engine</tag>
+  </tags>
+  
+  <previews>
    <preview>
-			 <type>exterior</type>
-			 <splash type="bool">true</splash>
-			 <path>Pics/j22-exterior01.jpg</path>
+    <type>exterior</type>
+    <splash type="bool">true</splash>
+    <path>Pics/j22-exterior01.jpg</path>
    </preview>
-		 <preview>
-			 <type>exterior</type>
-			 <splash type="bool">true</splash>
-			 <path>Pics/j22-exterior02.jpg</path>
+   <preview>
+    <type>exterior</type>
+    <splash type="bool">true</splash>
+    <path>Pics/j22-exterior02.jpg</path>
    </preview>
-		</previews>
+  </previews>
   
   <virtual-cockpit archive="y">false</virtual-cockpit>
 
@@ -111,6 +111,15 @@ There is also a two-seat training variant of this aircraft.
  
  <input>
   <keyboard>
+   <key n="2">
+    <name>Ctrl-b</name>
+    <desc>Toggle speedbrake</desc>
+    <binding>
+     <command>property-toggle</command>
+     <property>controls/flight/speedbrake</property>
+    </binding>
+   </key>
+   
    <key n="99">
     <name>c</name>
     <desc>Toggle canopy</desc>
@@ -147,6 +156,4 @@ There is also a two-seat training variant of this aircraft.
   </canopy>
  </nasal>
 </PropertyList>
-
-
 

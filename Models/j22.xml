@@ -151,7 +151,7 @@
   </axis>
  </animation>
  
-<!-- ELEVATORS -->
+ <!-- ELEVATORS -->
  <!-- Last right wing (elevator) -->
  <animation>
   <type>rotate</type>
@@ -752,7 +752,7 @@
   <type>rotate</type>
   <object-name>Airbrake.right</object-name>
   <object-name>RightBrake.cyl</object-name>
-  <property>surface-positions/right-spoiler-pos-norm</property>
+  <property>surface-positions/speedbrake-pos-norm</property>
   <factor>35</factor>
   <offset-deg>-35</offset-deg>
   <center>
@@ -772,7 +772,7 @@
   <type>rotate</type>
   <object-name>Airbrake.left</object-name>
   <object-name>LeftBrake.cyl</object-name>
-  <property>surface-positions/left-spoiler-pos-norm</property>
+  <property>surface-positions/speedbrake-pos-norm</property>
   <factor>35</factor>
   <offset-deg>-35</offset-deg>
   <center>
