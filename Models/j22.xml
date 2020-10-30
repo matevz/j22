@@ -98,6 +98,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Canopy</object-name>
+  <object-name>Canopy.interior</object-name>
   <property>/canopy/position-norm</property>
   <factor>55</factor>
   <center>
