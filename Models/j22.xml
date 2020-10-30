@@ -12,6 +12,7 @@
   <type>select</type>
   <object-name>Helmet</object-name>
   <object-name>BreathingTube</object-name>
+  <object-name>pilot</object-name>
   <condition>
    <not>
    <equals>
