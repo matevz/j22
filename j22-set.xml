@@ -78,6 +78,11 @@ There is also a two-seat training variant of this aircraft.
    <path>Aircraft/j22/Models/j22.xml</path>
   </model>
 
+  <submodels>
+   <serviceable type="bool">true</serviceable>
+   <path>Aircraft/j22/Submodels.xml</path>
+  </submodels>
+
   <view n="0">
    <internal archive="y">true</internal>
    <config>
@@ -109,6 +114,10 @@ There is also a two-seat training variant of this aircraft.
     <name>Ctrl-b</name>
     <desc>Toggle speedbrake</desc>
    </key>
+   <key>
+    <name>e</name>
+    <desc>Fire guns</desc>
+   </key>
   </help>
 
  </sim>
@@ -131,6 +140,23 @@ There is also a two-seat training variant of this aircraft.
      <command>nasal</command>
      <script>canopy.canopy_switch(2)</script>
     </binding>
+   </key>
+   
+   <key n="101">
+    <name>e</name>
+    <desc>Fire guns</desc>
+    <binding>
+     <command>property-assign</command>
+     <property>controls/armament/trigger</property>
+     <value>true</value>
+    </binding>
+    <mod-up>
+     <binding>
+      <command>property-assign</command>
+      <property>controls/armament/trigger</property>
+      <value>false</value>
+     </binding>
+    </mod-up>
    </key>
   </keyboard>
  </input>
@@ -158,6 +184,9 @@ There is also a two-seat training variant of this aircraft.
   <canopy>
    <file>Aircraft/j22/Nasal/canopy.nas</file>
   </canopy>
+  <guns>
+   <file>Aircraft/j22/Nasal/weapons.nas</file>
+  </guns>
  </nasal>
 </PropertyList>
 

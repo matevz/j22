@@ -49,3 +49,8 @@ exported. Later the model was reworked from scratch for FlightGear in Blender.
 # Support
 
 If you have any questions or issues, don't hesitate to open github issue.
+
+# Thanks
+
+- Guns model has been taken from Sukhoi Su-25 flightgear model by Petar Jedvaj,
+  Stuart Cassie, Raptor and Gary Brown
