@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<!-- pylon 2 L -->
+	<model>
+		<name>2LL-128-04</name>
+		<path>Aircraft/j22/Models/Payload/L-128-04.ac</path>
+		<offsets>
+			<x-m>-0.34</x-m>
+			<y-m>2.16</y-m>
+			<z-m>-0.19</z-m>
+			<roll-deg>-3</roll-deg>
+		</offsets>
+	</model>
+	<animation>
+		<type>select</type>
+		<object-name>2LL-128-04</object-name>
+		<condition>
+			<equals>
+				<property>sim/weight[1]/selected</property>
+				<value>L-128-04 rocket pod</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<!-- pylon 2 R -->
+	<model>
+		<name>2RL-128-04</name>
+		<path>Aircraft/j22/Models/Payload/L-128-04.ac</path>
+		<offsets>
+			<x-m>-0.34</x-m>
+			<y-m>-2.16</y-m>
+			<z-m>-0.19</z-m>
+			<roll-deg>-3</roll-deg>
+		</offsets>
+	</model>
+	<animation>
+		<type>select</type>
+		<object-name>2RL-128-04</object-name>
+		<condition>
+			<equals>
+				<property>sim/weight[3]/selected</property>
+				<value>L-128-04 rocket pod</value>
+			</equals>
+		</condition>
+	</animation>
+	
+</PropertyList>

@@ -67,7 +67,7 @@ There is also a two-seat training variant of this aircraft.
   </hud>
   
   <sound>
-   <path>Aircraft/a4/a4-sound.xml</path>
+   <path>Aircraft/j22/Sounds/Sounds.xml</path>
   </sound>
 
   <panel>
@@ -115,10 +115,69 @@ There is also a two-seat training variant of this aircraft.
     <desc>Toggle speedbrake</desc>
    </key>
    <key>
-    <name>e</name>
+    <name>f</name>
     <desc>Fire guns</desc>
    </key>
+   <key>
+    <name>e</name>
+    <desc>Fire L-128-04 rocket pod</desc>
+   </key>
   </help>
+ 
+ <!-- external stores -->
+ <weight n="0">
+  <name>Pylon 1 L</name>
+  <weight-lb>0</weight-lb>
+  <selected>none</selected>
+  <opt>
+   <name>none</name>
+   <lbs>0</lbs>
+  </opt>
+ </weight>
+ <weight n="1">
+  <name>Pylon 2 L</name>
+  <weight-lb>0</weight-lb>
+  <selected>L-128-04 rocket pod</selected>
+  <opt>
+   <name>none</name>
+   <lbs>0</lbs>
+  </opt>
+  <opt>
+   <name>L-128-04 rocket pod</name>
+   <lbs>530</lbs>
+  </opt>
+ </weight>
+ <weight n="2">
+  <name>Pylon fuselage</name>
+  <weight-lb>0</weight-lb>
+  <selected>none</selected>
+  <opt>
+   <name>none</name>
+   <lbs>0</lbs>
+  </opt>
+ </weight>
+ <weight n="3">
+  <name>Pylon 2 R</name>
+  <weight-lb>0</weight-lb>
+  <selected>L-128-04 rocket pod</selected>
+  <opt>
+   <name>none</name>
+   <lbs>0</lbs>
+  </opt>
+  <opt>
+   <name>L-128-04 rocket pod</name>
+   <lbs>530</lbs>
+  </opt>
+ </weight>
+ <weight n="4">
+  <name>Pylon 1 R</name>
+  <weight-lb>0</weight-lb>
+  <selected>none</selected>
+  <opt>
+   <name>none</name>
+   <lbs>0</lbs>
+  </opt>
+ </weight>
 
  </sim>
  
@@ -141,8 +200,23 @@ There is also a two-seat training variant of this aircraft.
      <script>canopy.canopy_switch(2)</script>
     </binding>
    </key>
-   
+
    <key n="101">
+    <name>e</name>
+    <desc>Fire L-128-04 rocket pod</desc>
+    <binding>
+     <command>nasal</command>
+     <script>guns.fire_Rocket()</script>
+    </binding>
+    <mod-up>
+     <binding>
+      <command>nasal</command>
+      <script>guns.stop_Rocket()</script>
+     </binding>
+    </mod-up>
+   </key>
+   
+   <key n="102">
     <name>e</name>
     <desc>Fire guns</desc>
     <binding>

@@ -31,12 +31,14 @@ exported. Later the model was reworked from scratch for FlightGear in Blender.
 - basic YASim flight model
 - movable elevators and ailerons
 - gear, canopy, speedbrake animation
+- sounds (kudos to SU-25 model)
+- weapons: GSh-23L gun, L-128-04 rocket pod
 
 ## TODO
 
 - more realistic flight model
 - 3d cockpit
-- avionics inlc. HUD, radar, armament system etc.
+- avionics: HUD, radar, armament system etc.
 
 # Repository structure
 
@@ -52,5 +54,5 @@ If you have any questions or issues, don't hesitate to open github issue.
 
 # Thanks
 
-- Guns model has been taken from Sukhoi Su-25 flightgear model by Petar Jedvaj,
-  Stuart Cassie, Raptor and Gary Brown
+- Weapon models and sounds have been taken from Sukhoi Su-25 flightgear model
+  by Petar Jedvaj, Stuart Cassie, Raptor and Gary Brown

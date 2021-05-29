@@ -6,6 +6,11 @@
 
  <path>j22.ac</path>
 
+ <!-- Payload -->
+ <model>
+  <path>Aircraft/j22/Models/Payload/Payload.xml</path>
+ </model>
+
 <!-- Hide objects at certain condition -->
  <!-- Hide pilot head (helmet) and breathing mask in 0 view -->
  <animation>
