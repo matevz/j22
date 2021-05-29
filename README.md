@@ -33,12 +33,13 @@ exported. Later the model was reworked from scratch for FlightGear in Blender.
 - gear, canopy, speedbrake animation
 - sounds (kudos to SU-25 model)
 - weapons: GSh-23L gun, L-128-04 rocket pod
+- avionics: basic HUD
 
 ## TODO
 
 - more realistic flight model
 - 3d cockpit
-- avionics: HUD, radar, armament system etc.
+- avionics: radar, armament system etc.
 
 # Repository structure
 

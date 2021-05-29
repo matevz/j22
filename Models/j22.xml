@@ -6,6 +6,15 @@
 
  <path>j22.ac</path>
 
+ <!-- Rembrandt hacks -->
+ <effect>
+  <inherits-from>Effects/model-transparent</inherits-from>
+  <object-name>hud</object-name>
+  <object-name>hud.canvas</object-name>
+  <object-name>Canopy</object-name>
+  <object-name>cabin.front</object-name>
+ </effect>
+
  <!-- Payload -->
  <model>
   <path>Aircraft/j22/Models/Payload/Payload.xml</path>

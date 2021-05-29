@@ -62,10 +62,6 @@ There is also a two-seat training variant of this aircraft.
   <aero>j22-yasim</aero>
   <fuel-fraction>1.0</fuel-fraction>
 
-  <hud>
-   <visibility n="1">true</visibility>
-  </hud>
-  
   <sound>
    <path>Aircraft/j22/Sounds/Sounds.xml</path>
   </sound>
@@ -87,7 +83,7 @@ There is also a two-seat training variant of this aircraft.
    <internal archive="y">true</internal>
    <config>
     <x-offset-m archive="y">0.0</x-offset-m>
-    <y-offset-m archive="y">0.795</y-offset-m>
+    <y-offset-m archive="y">0.765</y-offset-m>
     <z-offset-m archive="y">-4.20</z-offset-m>
     <pitch-offset-deg>-7</pitch-offset-deg>
     <default-field-of-view-deg>60</default-field-of-view-deg>
@@ -261,6 +257,9 @@ There is also a two-seat training variant of this aircraft.
   <guns>
    <file>Aircraft/j22/Nasal/weapons.nas</file>
   </guns>
+  <hud>
+   <file>Aircraft/j22/Nasal/hud.nas</file>
+  </hud>
  </nasal>
 </PropertyList>
 
