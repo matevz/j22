@@ -22,7 +22,7 @@ var HUD = {
     };
 
     m.canvas.addPlacement(placement);
-    m.canvas.setColorBackground(0.36, 1, 0.3, 0.02);
+    m.canvas.setColorBackground(0.36, 1, 0.3, 0.04);
     
     m.root =
       m.canvas.createGroup()
@@ -222,6 +222,6 @@ var HUD = {
 
 var init = setlistener("/sim/signals/fdm-initialized", func() {
   removelistener(init); # only call once
-  var hud_pilot = HUD.new({"node": "hud.canvas"});
+  var hud_pilot = HUD.new({"node": "hud"});
   hud_pilot.update();
 });
