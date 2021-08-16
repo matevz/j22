@@ -42,14 +42,16 @@
   </condition>
  </animation>
  
- <!-- Nose gear and nose gear reflectors when retracted -->
+ <!-- Nose gear and lights when retracted -->
  <animation>
   <type>select</type>
   <object-name>Nosegear</object-name>
   <object-name>Nosegear.cyl</object-name>
   <object-name>Nosegear.struct</object-name>
-  <object-name>Reflector01</object-name>
-  <object-name>Reflector02</object-name>
+  <object-name>TaxiLight01</object-name>
+  <object-name>LandingLight01</object-name>
+  <object-name>TaxiLight01.support</object-name>
+  <object-name>LandingLight01.support</object-name>
   <condition>
    <not>
    <equals>
@@ -59,7 +61,89 @@
    </not>
   </condition>
  </animation>
-  
+
+ <light>
+  <name>TaxiLight01.active</name>
+  <type>spot</type>
+  <position>
+    <x-m>-5.7703</x-m>
+    <y-m>0</y-m>
+    <z-m>-1.3529</z-m>
+  </position>
+  <direction>
+    <x>-6</x>
+    <y>0</y>
+    <z>-1.28279</z>
+  </direction>
+  <ambient>
+    <r>1</r>
+    <g>1</g>
+    <b>1</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0.95</r>
+    <g>0.9</g>
+    <b>0.9</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0.95</r>
+    <g>0.9</g>
+    <b>0.9</b>
+    <a>1</a>
+  </specular>
+  <attenuation>
+    <c>1.0</c>
+    <l>0.09</l>
+    <q>0.032</q>
+  </attenuation>
+  <spot-exponent>3</spot-exponent>
+  <spot-cutoff>60</spot-cutoff>
+  <range-m>50</range-m>
+ </light>
+
+ <light>
+  <name>LandingLight01.active</name>
+  <type>spot</type>
+  <position>
+    <x-m>-7.0349</x-m>
+    <y-m>0</y-m>
+    <z-m>-0.55445</z-m>
+  </position>
+  <direction>
+    <x>-6</x>
+    <y>0</y>
+    <z>-0.98279</z>
+  </direction>
+  <ambient>
+    <r>1</r>
+    <g>1</g>
+    <b>1</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0.95</r>
+    <g>0.9</g>
+    <b>0.9</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0.95</r>
+    <g>0.9</g>
+    <b>0.9</b>
+    <a>1</a>
+  </specular>
+  <attenuation>
+    <c>1.0</c>
+    <l>0.09</l>
+    <q>0.032</q>
+  </attenuation>
+  <spot-exponent>10</spot-exponent>
+  <spot-cutoff>20</spot-cutoff>
+  <range-m>500</range-m>
+ </light>
+
  <!-- Left gear when retracted -->
  <animation>
   <type>select</type>
@@ -157,7 +241,8 @@
   <object-name>Nosegear</object-name>
   <object-name>Nosegear.cyl</object-name>
   <object-name>Nosegear.struct</object-name>
-  <object-name>Reflector01</object-name>
+  <object-name>TaxiLight01</object-name>
+  <object-name>TaxiLight01.support</object-name>
   <property>surface-positions/rudder-pos-norm</property>
   <factor>25</factor>
   <center>
@@ -327,7 +412,8 @@
   <object-name>Nosegear</object-name>
   <object-name>Nosegear.cyl</object-name>
   <object-name>Nosegear.struct</object-name>
-  <object-name>Reflector01</object-name>
+  <object-name>TaxiLight01</object-name>
+  <object-name>TaxiLight01.support</object-name>
   <property>gear/gear/position-norm</property>
   <factor>-205</factor>
   <offset-deg>153.75</offset-deg>
@@ -387,48 +473,6 @@
   </axis>
  </animation>
 
- <!-- Nose gear left door close (gear up) -->
- <animation>
-  <type>rotate</type>
-  <object-name>Nosegear.door02</object-name>
-  <property>gear/gear/position-norm</property>
-  <factor>400</factor>
-  <offset-deg>-300</offset-deg>
-  <min-deg>0</min-deg>
-  <max-deg>95</max-deg>
-  <center>
-   <x-m>-6.685</x-m>
-   <y-m>-0.200</y-m>
-   <z-m>-0.518</z-m>
-  </center>
-  <axis>
-   <x>0.469</x>
-   <y>-0.009</y>
-   <z>-0.063</z>
-  </axis>
- </animation>
-
- <!-- Nose gear right door open (gear up) -->
- <animation>
-  <type>rotate</type>
-  <object-name>Nosegear.door03</object-name>
-  <property>gear/gear/position-norm</property>
-  <factor>-400</factor>
-  <offset-deg>300</offset-deg>
-  <min-deg>-95</min-deg>
-  <max-deg>0</max-deg>
-  <center>
-   <x-m>-6.685</x-m>
-   <y-m>0.200</y-m>
-   <z-m>-0.518</z-m>
-  </center>
-  <axis>
-   <x>0.469</x>
-   <y>0.009</y>
-   <z>-0.063</z>
-  </axis>
- </animation>
-
  <!-- Nose gear right door close (gear up) -->
  <animation>
   <type>rotate</type>
@@ -450,10 +494,11 @@
   </axis>
  </animation>
   
- <!-- Nose gear front reflector -->
+ <!-- Nose gear front landing light -->
  <animation>
   <type>rotate</type>
-  <object-name>Reflector02</object-name>
+  <object-name>LandingLight01</object-name>
+  <object-name>LandingLight01.support</object-name>
   <property>gear/gear/position-norm</property>
   <factor>720</factor>
   <offset-deg>-540</offset-deg>
@@ -471,10 +516,46 @@
   </axis>
  </animation>
 
+ <!-- Turn on landing lights -->
+ <animation>
+  <type>material</type> 
+  <object-name>TaxiLight01</object-name>
+  <object-name>LandingLight01</object-name>
+  <emission>	
+   <red>1</red>	
+   <green>1</green>	
+   <blue>1</blue>
+  </emission>
+  <condition>
+   <and>
+    <property>controls/lighting/landing-lights</property>
+    <greater-than>
+     <property>gear/gear/position-norm</property>
+     <value>0.95</value>
+    </greater-than>
+   </and>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>TaxiLight01.active</object-name>
+  <object-name>LandingLight01.active</object-name>
+  <condition>
+   <and>
+    <property>controls/lighting/landing-lights</property>
+    <greater-than>
+     <property>gear/gear/position-norm</property>
+     <value>0.95</value>
+    </greater-than>
+   </and>
+  </condition>
+ </animation>
+
  <!-- Nose gear compression -->
  <animation>
   <type>translate</type>
-  <object-name>Reflector01</object-name>
+  <object-name>TaxiLight01</object-name>
+  <object-name>TaxiLight01.support</object-name>
   <object-name>Nosegear</object-name>
   <object-name>Nosegear.cyl</object-name>
   <object-name>Nosegear.struct</object-name>
