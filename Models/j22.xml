@@ -136,6 +136,70 @@
   <range-m>500</range-m>
  </light>
 
+ <model>
+  <name>TaxiLight01.procedural</name>
+  <path>Aircraft/j22/Models/Effects/lights/taxi_light.xml</path>
+  <offsets>
+   <x-m>-5.7706</x-m>
+   <y-m>0</y-m>
+   <z-m>-1.3548</z-m>
+  </offsets>
+ </model>
+ <model>
+  <name>LandingLight01.procedural</name>
+  <path>Aircraft/j22/Models/Effects/lights/landing_light.xml</path>
+  <offsets>
+   <x-m>-7.0349</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.55445</z-m>
+  </offsets>
+ </model>
+ <model>
+  <name>NavigationLight.left.procedural</name>
+  <path>Aircraft/j22/Models/Effects/lights/navigation_light_left.xml</path>
+  <offsets>
+   <x-m>1.3884</x-m>
+   <y-m>-4.8794</y-m>
+   <z-m>0.18438</z-m>
+  </offsets>
+ </model>
+ <model>
+  <name>NavigationLight.right.procedural</name>
+  <path>Aircraft/j22/Models/Effects/lights/navigation_light_right.xml</path>
+  <offsets>
+   <x-m>1.3884</x-m>
+   <y-m>4.8794</y-m>
+   <z-m>0.18438</z-m>
+  </offsets>
+ </model>
+ <model>
+  <name>AntiicollisionLight.tail.procedural</name>
+  <path>Aircraft/j22/Models/Effects/lights/anticollision_light_tail.xml</path>
+  <offsets>
+   <x-m>5.7985</x-m>
+   <y-m>0</y-m>
+   <z-m>2.2396</z-m>
+  </offsets>
+ </model>
+ <model>
+  <name>AntiicollisionLight.top.procedural</name>
+  <path>Aircraft/j22/Models/Effects/lights/anticollision_light_body.xml</path>
+  <offsets>
+   <x-m>-1.5633</x-m>
+   <y-m>0</y-m>
+   <z-m>0.93825</z-m>
+  </offsets>
+ </model>
+ <model>
+  <name>AntiicollisionLight.bottom.procedural</name>
+  <path>Aircraft/j22/Models/Effects/lights/anticollision_light_body.xml</path>
+  <offsets>
+   <x-m>-3.0809</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.80347</z-m>
+  </offsets>
+ </model>
+
  <!-- Left gear when retracted -->
  <animation>
   <type>select</type>
@@ -510,28 +574,11 @@
 
  <!-- Turn on landing lights -->
  <animation>
-  <type>material</type> 
-  <object-name>TaxiLight01</object-name>
-  <object-name>LandingLight01</object-name>
-  <emission>	
-   <red>1</red>	
-   <green>1</green>	
-   <blue>1</blue>
-  </emission>
-  <condition>
-   <and>
-    <property>controls/lighting/landing-lights</property>
-    <greater-than>
-     <property>gear/gear/position-norm</property>
-     <value>0.95</value>
-    </greater-than>
-   </and>
-  </condition>
- </animation>
- <animation>
   <type>select</type>
   <object-name>TaxiLight01.active</object-name>
   <object-name>LandingLight01.active</object-name>
+  <object-name>TaxiLight01.procedural</object-name>
+  <object-name>LandingLight01.procedural</object-name>
   <condition>
    <and>
     <property>controls/lighting/landing-lights</property>
