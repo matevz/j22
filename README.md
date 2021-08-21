@@ -31,6 +31,7 @@ exported. Later the model was reworked from scratch for FlightGear in Blender.
 - basic YASim flight model
 - movable elevators and ailerons
 - gear, canopy, speedbrake animation
+- external lights
 - sounds (kudos to SU-25 model)
 - weapons: GSh-23L gun, L-128-04 rocket pod
 - avionics: basic HUD
