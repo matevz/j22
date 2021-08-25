@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+    <path>Aircraft/Generic/Effects/Thruster/thrust_flame.ac</path>
+    <nopreview/>
+    <animation>
+        <type>scale</type>
+        <property alias="/params/augmentation-alight"/>
+        <x-min>0.2</x-min>
+        <y-min>0.3</y-min>
+        <z-min>0.3</z-min>
+        <y-max>0.3</y-max>
+        <z-max>0.3</z-max>
+        <x-factor>1.972</x-factor>
+        <y-factor>0.3</y-factor>
+        <z-factor>0.3</z-factor>
+    </animation>
+    <effect>
+        <inherits-from>Aircraft/j22/Models/Effects/thrust-flame</inherits-from>
+        <object-name>Bounding_box</object-name>
+    </effect>
+
+</PropertyList>

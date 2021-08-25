@@ -16,6 +16,46 @@
  <model>
   <path>Aircraft/j22/Models/Payload/Payload.xml</path>
  </model>
+ 
+ <!-- Afterburners -->
+ <model>
+  <name>ThrustFlame.left</name>
+  <path>Aircraft/j22/Models/Effects/thrust_flame.xml</path>
+  <offsets>
+   <x-m>5.3427</x-m>
+   <y-m>-0.25539</y-m>
+   <z-m>-0.09092</z-m>
+  </offsets>
+ </model>
+ <model>
+  <name>ThrustFlame.right</name>
+  <path>Aircraft/j22/Models/Effects/thrust_flame.xml</path>
+  <offsets>
+   <x-m>5.3427</x-m>
+   <y-m>0.25539</y-m>
+   <z-m>-0.09092</z-m>
+  </offsets>
+ </model>
+ <animation>
+  <type>select</type>
+  <object-name>ThrustFlame.left</object-name>
+  <condition>
+   <equals>
+    <property>controls/engines/engine/throttle</property>
+    <value>1</value>
+   </equals>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>ThrustFlame.right</object-name>
+  <condition>
+   <equals>
+    <property>controls/engines/engine[1]/throttle</property>
+    <value>1</value>
+   </equals>
+  </condition>
+ </animation>
 
 <!-- Hide objects at certain condition -->
  <!-- Hide pilot head (helmet) and breathing mask in 0 view -->
