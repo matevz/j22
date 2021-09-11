@@ -12,9 +12,9 @@
 			<path>Aircraft/j22/Sounds/Samples/Engine-Turbine.wav</path>
 			
 			<condition>
-				<property>/engines/engine/running</property>
+				<property>/engines/engine/n2</property>
 				<not>
-					<property>sim/crashed</property>
+					<property>/sim/crashed</property>
 					<value type="bool">true</value>
 					<property>/sim/current-view/internal</property>
 				</not>
@@ -53,12 +53,10 @@
 			<path>Aircraft/j22/Sounds/Samples/Engine-Turbine.wav</path>
 			
 			<condition>
-				<and>
-					<property>/engines/engine/running</property>
-					<property>/sim/current-view/internal</property>
-				</and>
+				<property>/engines/engine/n2</property>
+				<property>/sim/current-view/internal</property>
 				<not>
-					<property>sim/crashed</property>
+					<property>/sim/crashed</property>
 					<value type="bool">true</value>
 				</not>
 			</condition>
@@ -96,10 +94,10 @@
 			<mode>looped</mode>
 			
 			<condition>
-				<property>/engines/engine/running</property>
+				<property>/engines/engine/n2</property>
 				<not>
 					<property>/sim/current-view/internal</property>
-					<property>sim/crashed</property>
+					<property>/sim/crashed</property>
 					<value type="bool">true</value>
 				</not>
 			</condition>
@@ -123,12 +121,10 @@
 			<mode>looped</mode>
 			
 			<condition>
-				<and>
-					<property>/engines/engine/running</property>
-					<property>/sim/current-view/internal</property>
-				</and>
+				<property>/sim/current-view/internal</property>
+				<property>/engines/engine/n2</property>
 				<not>
-					<property>sim/crashed</property>
+					<property>/sim/crashed</property>
 					<value type="bool">true</value>
 				</not>
 			</condition>
@@ -152,9 +148,9 @@
 			<mode>once</mode>
 			
 			<condition>
-				<property>controls/engines/engine/reheat</property>
+				<property>engines/engine/augmentation</property>
 				<not>
-					<property>sim/crashed</property>
+					<property>/sim/crashed</property>
 					<value type="bool">true</value>
 				</not>
 			</condition>
@@ -173,9 +169,9 @@
 			<mode>looped</mode>
 			
 			<condition>
-				<property>controls/engines/engine/reheat</property>
+				<property>engines/engine/augmentation</property>
 				<not>
-					<property>sim/crashed</property>
+					<property>/sim/crashed</property>
 					<value type="bool">true</value>
 				</not>
 			</condition>
@@ -194,10 +190,10 @@
 			<mode>looped</mode>
 			
 			<condition>
-				<property>/engines/engine/running</property>
+				<property>engines/engine/augmentation</property>
 				<not>
 					<property>/sim/current-view/internal</property>
-					<property>sim/crashed</property>
+					<property>/sim/crashed</property>
 					<value type="bool">true</value>
 				</not>
 			</condition>
@@ -685,7 +681,7 @@
 			<name>Crash</name>
 			<condition>
 				<equals>
-					<property>sim/crashed</property>
+					<property>/sim/crashed</property>
 					<value type="bool">true</value>
 				</equals>
 			</condition>

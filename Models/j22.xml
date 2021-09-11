@@ -41,8 +41,8 @@
   <object-name>ThrustFlame.left</object-name>
   <condition>
    <equals>
-    <property>controls/engines/engine/throttle</property>
-    <value>1</value>
+    <property>engines/engine/augmentation</property>
+    <value>true</value>
    </equals>
   </condition>
  </animation>
@@ -51,8 +51,8 @@
   <object-name>ThrustFlame.right</object-name>
   <condition>
    <equals>
-    <property>controls/engines/engine[1]/throttle</property>
-    <value>1</value>
+    <property>engines/engine[1]/augmentation</property>
+    <value>true</value>
    </equals>
   </condition>
  </animation>
@@ -280,7 +280,7 @@
   <object-name>BreathingTube</object-name>
   <property>gear/gear/steering-norm</property>
   <offset-deg>0</offset-deg>
-  <factor>-25</factor>
+  <factor>-20</factor>
   <center>
    <x-m>-4.020</x-m>
    <y-m>0.0</y-m>
@@ -289,7 +289,7 @@
   <axis>
    <x>0</x>
    <y>0</y>
-   <z>1</z>
+   <z>-1</z>
   </axis>
  </animation>
   
@@ -325,9 +325,9 @@
    <z-m>1.499</z-m>
   </center>
   <axis>
-   <x>15.274</x>
+   <x>-15.274</x>
    <y>0</y>
-   <z>32.246</z>
+   <z>-32.246</z>
   </axis>
  </animation>
  
@@ -339,8 +339,10 @@
   <object-name>Nosegear.struct</object-name>
   <object-name>TaxiLight01</object-name>
   <object-name>TaxiLight01.support</object-name>
+  <object-name>TaxiLight01.active</object-name>
+  <object-name>TaxiLight01.procedural</object-name>
   <property>surface-positions/rudder-pos-norm</property>
-  <factor>25</factor>
+  <factor>20</factor>
   <center>
    <x-m>-5.441</x-m>
    <y-m>0.0</y-m>
@@ -349,7 +351,7 @@
   <axis>
    <x>0</x>
    <y>0</y>
-   <z>1</z>
+   <z>-1</z>
   </axis>
  </animation>
  
@@ -358,8 +360,8 @@
  <animation>
   <type>rotate</type>
   <object-name>LastWing.right</object-name>
-  <property>surface-positions/elevator-pos-norm</property>
-  <factor>25</factor>
+  <property>/surface-positions/elevator-pos-norm</property>
+  <factor>22</factor>
   <center>
    <x-m>4.459</x-m>
    <y-m>0.693</y-m>
@@ -372,11 +374,11 @@
   </axis>
  </animation>
 
- <!-- Right aileron (elevator!) -->
+ <!-- Right aileron (elevator) -->
  <animation>
   <type>rotate</type>
   <object-name>Ailerons.right</object-name>
-  <property>surface-positions/elevator-pos-norm</property>
+  <property>/surface-positions/elevator-pos-norm</property>
   <factor>10</factor>
   <center>
    <x-m>1.182</x-m>
@@ -394,10 +396,8 @@
  <animation>
   <type>rotate</type>
   <object-name>LastWing.left</object-name>
-  <property>surface-positions/elevator-pos-norm</property>
-  <factor>25</factor>
-  <min-deg>-35</min-deg>
-  <max-deg>35</max-deg>
+  <property>/surface-positions/elevator-pos-norm</property>
+  <factor>22</factor>
   <center>
    <x-m>4.459</x-m>
    <y-m>-0.693</y-m>
@@ -410,11 +410,11 @@
   </axis>
  </animation>
 
- <!-- Left aileron (elevator!) -->
+ <!-- Left aileron (elevator) -->
  <animation>
   <type>rotate</type>
   <object-name>Ailerons.left</object-name>
-  <property>surface-positions/elevator-pos-norm</property>
+  <property>/surface-positions/elevator-pos-norm</property>
   <factor>-10</factor>
   <center>
    <x-m>1.182</x-m>
@@ -434,7 +434,7 @@
   <type>rotate</type>
   <object-name>LastWing.left</object-name>
   <property>surface-positions/left-aileron-pos-norm</property>
-  <factor>18</factor>
+  <factor>15</factor>
   <center>
    <x-m>4.459</x-m>
    <y-m>-0.693</y-m>
@@ -453,6 +453,7 @@
   <object-name>Ailerons.left</object-name>
   <property>surface-positions/left-aileron-pos-norm</property>
   <factor>-20</factor>
+
   <center>
    <x-m>1.182</x-m>
    <y-m>-2.700</y-m>
@@ -470,7 +471,7 @@
   <type>rotate</type>
   <object-name>LastWing.right</object-name>
   <property>surface-positions/right-aileron-pos-norm</property>
-  <factor>18</factor>
+  <factor>-15</factor>
   <center>
    <x-m>4.459</x-m>
    <y-m>0.693</y-m>
@@ -488,7 +489,7 @@
   <type>rotate</type>
   <object-name>Ailerons.right</object-name>
   <property>surface-positions/right-aileron-pos-norm</property>
-  <factor>20</factor>
+  <factor>-20</factor>
   <center>
    <x-m>1.182</x-m>
    <y-m>2.700</y-m>
@@ -1025,7 +1026,4 @@
  </animation>
 
 </PropertyList>
-
-
-
 

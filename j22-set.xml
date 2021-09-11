@@ -3,7 +3,7 @@
 ************************************************************************
 Soko J-22 Orao simulation config.
 
-2001-2020 Matevž Jekovec
+2001-2021 Matevž Jekovec
 ************************************************************************
 -->
 
@@ -22,12 +22,12 @@ like HUD, laser-aimed altitude, night-vision and radion-avigation controls.
 There is also a two-seat training variant of this aircraft.
  </long-description>
  
-  <rating>
-   <FDM type="int">1</FDM>
-   <systems type="int">1</systems>
-   <cockpit type="int">1</cockpit>
-   <model type="int">2</model>
-  </rating>
+ <rating>
+  <FDM type="int">3</FDM>
+  <systems type="int">1</systems>
+  <cockpit type="int">1</cockpit>
+  <model type="int">3</model>
+ </rating>
   
   <tags>
    <tag>fighter</tag>
@@ -58,8 +58,8 @@ There is also a two-seat training variant of this aircraft.
   
   <virtual-cockpit archive="y">false</virtual-cockpit>
 
-  <flight-model>yasim</flight-model>
-  <aero>j22-yasim</aero>
+  <flight-model>jsb</flight-model>
+  <aero>j22-jsb</aero>
   <fuel-fraction>1.0</fuel-fraction>
 
   <sound>
@@ -119,62 +119,8 @@ There is also a two-seat training variant of this aircraft.
     <desc>Fire L-128-04 rocket pod</desc>
    </key>
   </help>
- 
- <!-- external stores -->
- <weight n="0">
-  <name>Pylon 1 L</name>
-  <weight-lb>0</weight-lb>
-  <selected>none</selected>
-  <opt>
-   <name>none</name>
-   <lbs>0</lbs>
-  </opt>
- </weight>
- <weight n="1">
-  <name>Pylon 2 L</name>
-  <weight-lb>0</weight-lb>
-  <selected>L-128-04 rocket pod</selected>
-  <opt>
-   <name>none</name>
-   <lbs>0</lbs>
-  </opt>
-  <opt>
-   <name>L-128-04 rocket pod</name>
-   <lbs>530</lbs>
-  </opt>
- </weight>
- <weight n="2">
-  <name>Pylon fuselage</name>
-  <weight-lb>0</weight-lb>
-  <selected>none</selected>
-  <opt>
-   <name>none</name>
-   <lbs>0</lbs>
-  </opt>
- </weight>
- <weight n="3">
-  <name>Pylon 2 R</name>
-  <weight-lb>0</weight-lb>
-  <selected>L-128-04 rocket pod</selected>
-  <opt>
-   <name>none</name>
-   <lbs>0</lbs>
-  </opt>
-  <opt>
-   <name>L-128-04 rocket pod</name>
-   <lbs>530</lbs>
-  </opt>
- </weight>
- <weight n="4">
-  <name>Pylon 1 R</name>
-  <weight-lb>0</weight-lb>
-  <selected>none</selected>
-  <opt>
-   <name>none</name>
-   <lbs>0</lbs>
-  </opt>
- </weight>
-
+  
+  <menubar include="j22-menu.xml"/>
  </sim>
  
  <input>
@@ -251,6 +197,9 @@ There is also a two-seat training variant of this aircraft.
  </autopilot>
 
  <nasal>
+  <starter>
+   <file>Aircraft/j22/Nasal/starter.nas</file>
+  </starter>
   <canopy>
    <file>Aircraft/j22/Nasal/canopy.nas</file>
   </canopy>
@@ -260,6 +209,12 @@ There is also a two-seat training variant of this aircraft.
   <hud>
    <file>Aircraft/j22/Nasal/hud.nas</file>
   </hud>
+  <stations>
+   <file>Aircraft/j22/Nasal/station-manager.nas</file>
+  </stations>
+  <pylons>
+   <file>Aircraft/j22/Nasal/pylons.nas</file>
+  </pylons>
  </nasal>
 </PropertyList>
 
