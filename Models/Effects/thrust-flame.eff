@@ -3,9 +3,9 @@
     <name>AB-flame</name>
     <inherits-from>Effects/thrust-flame</inherits-from>
     <parameters>
-        <base_flame_r type="float">0.50</base_flame_r>
-        <base_flame_g type="float">0.63</base_flame_g>
-        <base_flame_b type="float">0.95</base_flame_b>
+        <base_flame_r type="float">0.027</base_flame_r>
+        <base_flame_g type="float">0.294</base_flame_g>
+        <base_flame_b type="float">0.541</base_flame_b>
         <base_flame_density type="float">0.5</base_flame_density>
         <deflection_coeff type="float">0</deflection_coeff>
         <flame_color_high_r type="float">0.60</flame_color_high_r>
@@ -16,9 +16,9 @@
         <flame_color_low_b type="float">0.46</flame_color_low_b>
         <flame_radius_fraction type="float">0.7</flame_radius_fraction>
         <noise_scale type="float">0.3</noise_scale>
-        <noise_strength type="float">0.2</noise_strength>
+        <noise_strength type="float">0.3</noise_strength>
         <thrust_collimation type="float">0.1</thrust_collimation>
-        <thrust_density type="float">0.7</thrust_density>
+        <thrust_density type="float">0.6</thrust_density>
         <use_noise type="int">1</use_noise>
         <use_shocks type="int">1</use_shocks>
     </parameters>

@@ -196,6 +196,10 @@ There is also a two-seat training variant of this aircraft.
    </config>
  </autopilot>
 
+ <controls>
+  <hud type="bool">false</hud>
+ </controls>
+ 
  <nasal>
   <starter>
    <file>Aircraft/j22/Nasal/starter.nas</file>

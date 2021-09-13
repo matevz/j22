@@ -2,7 +2,6 @@
 
 ## External 3D model and animation
 
-- flaps
 - drag chute
 - make air intakes look more realistic
 - make default livery texture more realistic
@@ -14,6 +13,7 @@
 
 ## Payload and Armament
 
+- fix L-128-04 animation errors (see debug output)
 - add 500l droptank
 - add 1500l droptank
 - add K-13 missle

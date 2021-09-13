@@ -69,8 +69,14 @@ var pressStarter = func {
 
 # External auto-start of all engines
 var autoStart = func {
-
-    setprop("/sim/messages/ground", "External Engine start initiated.");
+    props.globals.getNode("/controls/switches/taxi-lights").setBoolValue(1);
+    props.globals.getNode("/controls/switches/landing-light").setBoolValue(1);
+    props.globals.getNode("/controls/switches/nav-lights").setBoolValue(1);
+    props.globals.getNode("/controls/switches/strobe-lights").setBoolValue(1);
+    props.globals.getNode("/controls/switches/flashing-beacon").setBoolValue(1);
+    props.globals.getNode("/controls/flight/flaps").setValue(1.0);
+    props.globals.getNode("/controls/hud").setBoolValue(1);
+   
 
     # Toggle master on. All magnetos to "both".
     foreach (var e; controls.engines)
@@ -97,8 +103,6 @@ var autoStart = func {
       {
         e.controls.getNode("starter").setValue(0);
       }
-      
-      setprop("/sim/messages/ground", "Engine start complete.");
     }, 40);
 }
 

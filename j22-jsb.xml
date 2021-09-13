@@ -218,31 +218,21 @@
   <tank type="FUEL" number="0">
      <location unit="IN">
        <x> 351.99 </x>
-       <y>   0.00 </y>
+       <y> -54.00 </y>
        <z> -14.67 </z>
      </location>
-     <capacity unit="LBS"> 1685.77 </capacity>
-     <contents unit="LBS"> 842.88 </contents>
+     <capacity unit="KG"> 1275 </capacity>
+     <contents unit="KG"> 1000 </contents>
   </tank>
 
   <tank type="FUEL" number="1">
      <location unit="IN">
        <x> 351.99 </x>
-       <y>   0.00 </y>
+       <y>  54.00 </y>
        <z> -14.67 </z>
      </location>
-     <capacity unit="LBS"> 1685.77 </capacity>
-     <contents unit="LBS"> 842.88 </contents>
-  </tank>
-
-  <tank type="FUEL" number="2">
-     <location unit="IN">
-       <x> 351.99 </x>
-       <y>   0.00 </y>
-       <z> -14.67 </z>
-     </location>
-     <capacity unit="LBS"> 1685.77 </capacity>
-     <contents unit="LBS"> 842.88 </contents>
+     <capacity unit="KG"> 1275 </capacity>
+     <contents unit="KG"> 1000 </contents>
   </tank>
 
  </propulsion>
